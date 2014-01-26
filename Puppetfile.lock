@@ -64,6 +64,11 @@ GITHUBTARBALL
     java (1.2.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-mysql
+  specs:
+    mysql (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
     nodejs (3.5.0)
@@ -82,6 +87,11 @@ GITHUBTARBALL
   remote: boxen/puppet-pkgconfig
   specs:
     pkgconfig (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-postgresql
+  specs:
+    postgresql (3.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-propane
@@ -112,6 +122,11 @@ GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-sysctl
+  specs:
+    sysctl (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-tower
@@ -163,10 +178,12 @@ DEPENDENCIES
   intellij (= 1.4.0)
   iterm2 (= 1.0.6)
   java (= 1.2.0)
+  mysql (= 1.2.0)
   nodejs (= 3.5.0)
   openssl (= 1.0.0)
   osx (= 2.2.2)
   pkgconfig (= 1.0.0)
+  postgresql (= 3.0.0)
   propane (= 1.0.0)
   repository (= 2.2.0)
   ruby (= 7.1.6)
@@ -174,6 +191,7 @@ DEPENDENCIES
   skype (= 1.0.8)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)
+  sysctl (= 1.0.0)
   tower (= 1.0.0)
   transmit (= 1.0.2)
   vlc (= 1.0.5)

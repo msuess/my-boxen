@@ -76,6 +76,12 @@ node default {
   # default ruby versions
   ruby::version { '1.9.3': }
 
+  # MySQL
+  include mysql
+
+  # PostgreSQL
+  include postgresql
+
   # common, useful packages
   package {
     [
