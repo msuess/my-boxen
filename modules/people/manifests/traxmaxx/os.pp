@@ -8,11 +8,14 @@ class people::traxmaxx::os {
   include osx::global::expand_print_dialog
 
   include osx::global::disable_autocorrect
+  include osx::global::enable_keyboard_control_access
+
   include osx::disable_app_quarantine
 
   include osx::finder::unhide_library
   include osx::finder::show_hidden_files
   include osx::no_network_dsstores
+  include osx::finder::enable_quicklook_text_selection
 
   class { 'osx::global::key_repeat_rate': rate => 0 }
   class { 'osx::global::key_repeat_delay': delay => 10 }

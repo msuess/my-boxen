@@ -60,13 +60,26 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
+  # default node versions
+  include nodejs::v0_10
+
+  # default npm modules
+  nodejs::module { 'bower':
+    node_version => 'v0.10'
+  }
+  nodejs::module { 'grunt-cli':
+    node_version => 'v0.10'
+  }
+
   # default ruby versions
-  include ruby::1_9_3
+  ruby::version { '1.9.3': }
 
   # common, useful packages
   package {
     [
-      'ack'
+      'ack',
+      'findutils',
+      'gnu-tar'
     ]:
   }
 
