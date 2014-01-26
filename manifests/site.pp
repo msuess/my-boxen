@@ -65,10 +65,12 @@ node default {
 
   # default npm modules
   nodejs::module { 'bower':
-    node_version => 'v0.10'
+    node_version => 'v0.10',
+    ensure => '1.2.8'
   }
   nodejs::module { 'grunt-cli':
-    node_version => 'v0.10'
+    node_version => 'v0.10',
+    ensure => '0.1.13'
   }
 
   # default ruby versions
