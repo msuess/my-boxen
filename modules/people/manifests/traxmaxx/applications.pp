@@ -4,6 +4,7 @@ class people::traxmaxx::applications {
   include firefox
   include flux
   include kaleidoscope
+  include littlesnitch
   include propane
   include skype
   include sequel_pro

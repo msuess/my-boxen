@@ -18,7 +18,7 @@ class people::traxmaxx::os {
   include osx::finder::enable_quicklook_text_selection
 
   class { 'osx::global::key_repeat_rate': rate => 0 }
-  class { 'osx::global::key_repeat_delay': delay => 10 }
+  class { 'osx::global::key_repeat_delay': delay => 0 }
 
   include osx::dock::autohide
   include osx::dock::2d
