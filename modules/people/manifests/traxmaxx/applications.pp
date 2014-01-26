@@ -3,8 +3,12 @@ class people::traxmaxx::applications {
   include chrome
   include firefox
   include flux
+  include propane
   include skype
   include sequel_pro
+  include tower
+  include transmit
+  include vlc
 
 
   class { 'intellij':
