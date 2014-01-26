@@ -154,6 +154,11 @@ GITHUBTARBALL
     xquartz (1.1.1)
 
 GITHUBTARBALL
+  remote: ngs/puppet-kaleidoscope
+  specs:
+    kaleidoscope (1.0.4)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.0.0)
@@ -178,6 +183,7 @@ DEPENDENCIES
   intellij (= 1.4.0)
   iterm2 (= 1.0.6)
   java (= 1.2.0)
+  kaleidoscope (= 1.0.4)
   mysql (= 1.2.0)
   nodejs (= 3.5.0)
   openssl (= 1.0.0)

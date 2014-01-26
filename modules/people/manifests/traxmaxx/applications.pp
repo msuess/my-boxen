@@ -3,6 +3,7 @@ class people::traxmaxx::applications {
   include chrome
   include firefox
   include flux
+  include kaleidoscope
   include propane
   include skype
   include sequel_pro
