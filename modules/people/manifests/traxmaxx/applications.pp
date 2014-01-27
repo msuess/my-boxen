@@ -3,7 +3,6 @@ class people::traxmaxx::applications {
   include chrome
   include firefox
   include flux
-  include kaleidoscope
   include littlesnitch
   include propane
   include skype
@@ -17,6 +16,11 @@ class people::traxmaxx::applications {
   	edition => 'ultimate',
     version => '13.0.1'
 	}
+
+  class { 'kaleidoscope':
+    enable_cli => true,
+    make_default => false
+  }
 
   class { 'vmware_fusion':
     version => '6.0.2-1398658' 
