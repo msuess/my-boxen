@@ -26,4 +26,9 @@ class people::traxmaxx::applications {
   class { 'vmware_fusion':
     version => '6.0.2-1398658' 
   }
+
+  # Homebrew Package
+  package { 'ant':
+    ensure => installed
+  }
 }
