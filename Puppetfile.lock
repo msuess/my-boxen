@@ -1,4 +1,9 @@
 GITHUBTARBALL
+  remote: Traxmaxx/puppet-invisionsync
+  specs:
+    invisionsync (1.0.0)
+
+GITHUBTARBALL
   remote: Traxmaxx/puppet-littlesnitch
   specs:
     littlesnitch (1.0.2)
@@ -186,6 +191,7 @@ DEPENDENCIES
   homebrew (= 1.6.0)
   inifile (= 1.0.0)
   intellij (= 1.4.0)
+  invisionsync (= 1.0.0)
   iterm2 (= 1.0.6)
   java (= 1.2.0)
   kaleidoscope (= 1.0.4)

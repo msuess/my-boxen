@@ -15,7 +15,9 @@ class people::traxmaxx {
   $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
 
   repository { $dotfiles_dir:
-    source => "Traxmaxx/my-dotfiles"
+    source => "Traxmaxx/my-dotfiles",
+    ensure => "master",
+    force => true
   }
 
   file { "${home}/.gitconfig":

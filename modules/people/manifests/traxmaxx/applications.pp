@@ -3,6 +3,7 @@ class people::traxmaxx::applications {
   include chrome
   include firefox
   include flux
+  include invisionsync
   include littlesnitch
   include propane
   include skype
