@@ -1,7 +1,5 @@
 class people::traxmaxx {
 
-  notify { 'class people::traxmaxx declared': }
-
   include people::traxmaxx::os
   include people::traxmaxx::shell
   include people::traxmaxx::applications
@@ -65,6 +63,12 @@ class people::traxmaxx {
   file { "${home}/.config/fish/rbenv.fish":
     ensure  => link,
     target  => "${dotfiles_dir}/.config/fish/rbenv.fish",
+    require => Repository[$dotfiles_dir]
+  }
+
+  file { "${home}/.rbenv":
+    ensure  => link,
+    target  => "/opt/boxen/rbenv/",
     require => Repository[$dotfiles_dir]
   }
 }
