@@ -9,6 +9,7 @@ class people::traxmaxx::os {
 
   include osx::global::disable_autocorrect
   include osx::global::enable_keyboard_control_access
+  include osx::global::tap_to_click
 
   include osx::disable_app_quarantine
 
@@ -24,4 +25,10 @@ class people::traxmaxx::os {
   include osx::dock::2d
   class { 'osx::dock::icon_size': size => 36 }
   class { 'osx::dock::position': position => 'bottom' }
+
+  class { 'osx::dock::hot_corners':
+    top_right => "Start Screen Saver",
+    top_left => "Mission Control",
+    bottom_right => "Desktop"
+  }
 }
