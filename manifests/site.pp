@@ -75,6 +75,7 @@ node default {
 
   # default ruby versions
   ruby::version { '1.9.3': }
+<<<<<<< HEAD
 
   # MySQL
   include mysql
