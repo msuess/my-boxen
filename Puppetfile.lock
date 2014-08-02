@@ -16,7 +16,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (3.6.1)
+    boxen (3.6.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-caffeine
@@ -46,17 +46,17 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-gcc
   specs:
-    gcc (2.0.101)
+    gcc (2.1.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-git
   specs:
-    git (2.4.0)
+    git (2.5.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
-    homebrew (1.9.3)
+    homebrew (1.9.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-intellij
@@ -81,7 +81,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
-    nodejs (3.7.0)
+    nodejs (3.8.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-openssl
@@ -116,7 +116,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (8.0.4)
+    ruby (8.1.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-sequel_pro
@@ -181,19 +181,19 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: ripienaar/puppet-module-data
   specs:
-    module-data (0.0.3)
+    module_data (0.0.3)
 
 DEPENDENCIES
   android (= 1.3.0)
-  boxen (= 3.6.1)
+  boxen (= 3.6.2)
   caffeine (= 1.0.0)
   chrome (= 1.1.2)
   firefox (= 1.2.1)
   fish (= 1.0.0)
   flux (= 1.0.1)
-  gcc (= 2.0.101)
-  git (= 2.4.0)
-  homebrew (= 1.9.3)
+  gcc (= 2.1.1)
+  git (= 2.5.0)
+  homebrew (= 1.9.4)
   inifile (= 1.0.3)
   intellij (= 1.5.1)
   invisionsync (= 1.0.0)
@@ -201,16 +201,16 @@ DEPENDENCIES
   java (= 1.6.0)
   kaleidoscope (= 1.0.5)
   littlesnitch (= 1.0.2)
-  module-data (= 0.0.3)
+  module_data (= 0.0.3)
   mysql (= 1.2.0)
-  nodejs (= 3.7.0)
+  nodejs (= 3.8.1)
   openssl (= 1.0.0)
   osx (= 2.7.0)
   pkgconfig (= 1.0.0)
   postgresql (= 3.0.0)
   propane (= 1.0.0)
   repository (= 2.3.0)
-  ruby (= 8.0.4)
+  ruby (= 8.1.2)
   sequel_pro (= 1.0.1)
   skype (= 1.0.8)
   stdlib (= 4.2.1)
