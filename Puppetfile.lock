@@ -71,7 +71,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-java
   specs:
-    java (1.5.0)
+    java (1.6.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-mysql
@@ -198,7 +198,7 @@ DEPENDENCIES
   intellij (= 1.5.1)
   invisionsync (= 1.0.0)
   iterm2 (= 1.1.1)
-  java (= 1.5.0)
+  java (= 1.6.0)
   kaleidoscope (= 1.0.5)
   littlesnitch (= 1.0.2)
   module-data (= 0.0.3)
