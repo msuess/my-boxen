@@ -66,7 +66,7 @@ node default {
   # default npm modules
   nodejs::module { 'bower':
     node_version => 'v0.10',
-    ensure => '1.2.8'
+    ensure => '1.3.8'
   }
   nodejs::module { 'grunt-cli':
     node_version => 'v0.10',
