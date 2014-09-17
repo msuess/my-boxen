@@ -11,6 +11,7 @@ class people::traxmaxx::applications {
   include sequel_pro
   include tower
   include transmit
+  include viscosity
   include vlc
 
 
@@ -21,7 +22,7 @@ class people::traxmaxx::applications {
 
   class { 'kaleidoscope':
     enable_cli => true,
-    make_default => true
+    make_default => false
   }
 
   class { 'vmware_fusion':
