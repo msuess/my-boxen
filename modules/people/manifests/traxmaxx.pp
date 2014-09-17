@@ -8,6 +8,8 @@ class people::traxmaxx {
   include android::tools
   include android::platform_tools
 
+  android::build_tools { '20': }
+
   # My dotfile repository
   $home = "/Users/${::boxen_user}"
   $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
