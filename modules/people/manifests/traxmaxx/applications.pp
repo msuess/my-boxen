@@ -6,7 +6,6 @@ class people::traxmaxx::applications {
   include flux
   include invisionsync
   include littlesnitch
-  include propane
   include skype
   include sequel_pro
   include tower
@@ -17,7 +16,7 @@ class people::traxmaxx::applications {
 
   class { 'intellij':
   	edition => 'ultimate',
-    version => '13.1.3'
+    version => '13.1.4'
 	}
 
   class { 'kaleidoscope':
@@ -26,7 +25,7 @@ class people::traxmaxx::applications {
   }
 
   class { 'vmware_fusion':
-    version => '6.0.4'
+    version => '7.0.0-2103067'
   }
 
   # Homebrew Package
