@@ -23,7 +23,7 @@ class people::msuess::os {
 
   include osx::dock::autohide
   #include osx::dock::2d
-  class { 'osx::dock::icon_size': size => 36 }
+  class { 'osx::dock::icon_size': size => 48 }
   class { 'osx::dock::position': position => 'bottom' }
 
   class { 'osx::dock::hot_corners':
