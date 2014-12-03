@@ -130,9 +130,17 @@ class people::msuess {
     ensure => "master",
     force => true
   }
-  #exec { "Install ViM Plugins":
-    #command => "vim +BundleInstall +qall",
-    #path => "/opt/boxen/homebrew/bin",
-    #require => Repository[$vundle_dir]
-  #}
+  exec { "Install ViM Plugins":
+    command => "vim -es +BundleInstall +qall",
+    path => "/opt/boxen/homebrew/bin",
+    require => Repository[$vundle_dir]
+  }
+
+  $ycm_dir = "${home}/.vim/bundle/YouCompleteMe/"
+  exec { 'compile YouCompleteMe':
+    command => "${ycm_dir}/install.sh",
+    creates => "${ycm_dir}/third_party/ycmd/ycm_core.so",
+    cwd => $ycm_dir,
+    require => Repository[$vundle_dir]
+  }
 }

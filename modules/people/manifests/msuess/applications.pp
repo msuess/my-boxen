@@ -3,6 +3,7 @@ class people::msuess::applications {
   include chrome
   include firefox
   include hipchat
+  include sequel_pro
   include skype
   include virtualbox
   include vlc
