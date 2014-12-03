@@ -5,6 +5,7 @@ class people::msuess::applications {
   include hipchat
   include sequel_pro
   include skype
+  include tmux
   include virtualbox
   include vlc
 
