@@ -27,9 +27,9 @@ class people::msuess::os {
   class { 'osx::dock::position': position => 'bottom' }
 
   class { 'osx::dock::hot_corners':
-    top_right => "Start Screen Saver",
-    top_left => "Mission Control",
-    bottom_right => "Desktop"
+    top_right    => 'Start Screen Saver',
+    top_left     => 'Mission Control',
+    bottom_right => 'Desktop'
   }
 
   class { 'osx::sound::interface_sound_effects': enable => false }
