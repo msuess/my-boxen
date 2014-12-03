@@ -149,6 +149,11 @@ GITHUBTARBALL
     sysctl (1.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-tmux
+  specs:
+    tmux (1.0.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-tower
   specs:
     tower (1.0.0)
@@ -243,6 +248,7 @@ DEPENDENCIES
   stdlib (= 4.2.1)
   sudo (= 1.0.0)
   sysctl (= 1.0.1)
+  tmux (= 1.0.2)
   tower (= 1.0.0)
   transmit (= 1.0.2)
   vagrant (= 3.2.0)
