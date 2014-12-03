@@ -31,4 +31,6 @@ class people::msuess::os {
     top_left => "Mission Control",
     bottom_right => "Desktop"
   }
+
+  class { 'osx::sound::interface_sound_effects': enable => false }
 }
