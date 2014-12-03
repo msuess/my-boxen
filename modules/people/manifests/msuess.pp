@@ -124,6 +124,12 @@ class people::msuess {
     require => Repository[$dotfiles_dir]
   }
 
+  file { "${home}/.tmux.conf":
+    ensure  => link,
+    target  => "${dotfiles_dir}/tmux.conf",
+    require => Repository[$dotfiles_dir]
+  }
+
   $vundle_dir = "${home}/.vim/bundle/vundle"
   repository { $vundle_dir:
     source => "gmarik/vundle",

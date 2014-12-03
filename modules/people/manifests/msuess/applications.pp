@@ -32,6 +32,9 @@ class people::msuess::applications {
   package { 'elasticsearch':
     ensure => installed
   }
+  package { 'reattach-to-user-namespace':
+    ensure => installed
+  }
   package { 'vim':
     ensure => installed
   }
