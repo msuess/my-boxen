@@ -8,12 +8,33 @@ class people::msuess {
   include android::tools
   include android::platform_tools
 
+  include ruby
+
   android::build_tools { '20': }
 
+  ruby_gem { 'puppet for 2.1.0':
+      gem => 'puppet',
+      version => '~> 3.7.3',
+      ruby_version => '2.1.0'
+  }
+  ruby_gem { 'librarian-puppet for 2.1.0':
+      gem => 'librarian-puppet',
+      version => '~> 2.0.0',
+      ruby_version => '2.1.0'
+  }
+  ruby_gem { 'nokogiri for 2.1.0':
+      gem => 'nokogiri',
+      version => '1.6.5',
+      ruby_version => '2.1.0'
+  }
   # My dotfile repository
   $home = "/Users/${::boxen_user}"
   $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
   $ohmyzsh_dir = "${home}/.oh-my-zsh"
+
+  ruby::local { $home:
+    version => "2.1.0"
+  }
 
   repository { $dotfiles_dir:
     source => "msuess/dotfiles",
@@ -109,9 +130,9 @@ class people::msuess {
     ensure => "master",
     force => true
   }
-  exec { "Install ViM Plugins":
-    command => "vim +BundleInstall +qall",
-    path => "/opt/boxen/homebrew/bin",
-    require => Repository[$vundle_dir]
-  }
+  #exec { "Install ViM Plugins":
+    #command => "vim +BundleInstall +qall",
+    #path => "/opt/boxen/homebrew/bin",
+    #require => Repository[$vundle_dir]
+  #}
 }

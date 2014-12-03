@@ -2,9 +2,17 @@ class people::msuess::applications {
   include caffeine
   include chrome
   include firefox
+  include hipchat
   include skype
+  include virtualbox
   include vlc
 
+  class { 'vagrant':
+    version => '1.6.5'
+  }
+
+  vagrant::plugin { 'vagrant-vbguest': }
+  vagrant::plugin { 'vagrant-hostmanager': }
 
   # Homebrew Packages
   package { 'ag':
