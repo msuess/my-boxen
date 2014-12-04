@@ -4,6 +4,7 @@ class people::msuess::applications {
   include firefox
   include hipchat
   include sequel_pro
+  include sourcetree
   include skype
   include tmux
   include virtualbox
