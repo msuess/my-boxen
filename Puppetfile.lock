@@ -34,6 +34,11 @@ GITHUBTARBALL
     chrome (1.2.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-clojure
+  specs:
+    clojure (1.3.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-docker
   specs:
     docker (0.7.0)
@@ -229,6 +234,7 @@ DEPENDENCIES
   boxen (= 3.7.0)
   caffeine (= 1.0.0)
   chrome (= 1.2.0)
+  clojure (= 1.3.0)
   docker (= 0.7.0)
   firefox (= 1.2.3)
   fish (= 1.0.0)
