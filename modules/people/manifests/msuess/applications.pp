@@ -3,6 +3,7 @@ class people::msuess::applications {
   include chrome
   include clojure
   include docker
+  include fig
   include firefox
   include hipchat
   include sequel_pro

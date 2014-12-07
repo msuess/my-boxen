@@ -21,3 +21,5 @@ ruby::rbenv_plugins:
 
 # See https://github.com/boxen/puppet-java for docs
 #java::update_version: 51
+
+fig::version: "1.0.1"
