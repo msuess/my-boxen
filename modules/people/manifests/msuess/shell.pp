@@ -1,6 +1,6 @@
 class people::msuess::shell {
 
-  include iterm2::stable
+  include iterm2::dev
   include zsh
 
   iterm2::colors { 'hybrid':
