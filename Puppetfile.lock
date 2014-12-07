@@ -34,6 +34,11 @@ GITHUBTARBALL
     chrome (1.2.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-docker
+  specs:
+    docker (0.7.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-firefox
   specs:
     firefox (1.2.3)
@@ -224,6 +229,7 @@ DEPENDENCIES
   boxen (= 3.7.0)
   caffeine (= 1.0.0)
   chrome (= 1.2.0)
+  docker (= 0.7.0)
   firefox (= 1.2.3)
   fish (= 1.0.0)
   flux (= 1.0.1)

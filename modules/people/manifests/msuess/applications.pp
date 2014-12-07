@@ -1,6 +1,7 @@
 class people::msuess::applications {
   include caffeine
   include chrome
+  include docker
   include firefox
   include hipchat
   include sequel_pro
