@@ -27,6 +27,11 @@ class people::msuess {
       version => '1.6.5',
       ruby_version => '2.1.2'
   }
+  ruby_gem { 'gem-ctags for all versions':
+      gem          => 'gem-ctags',
+      version      => '~> 1.0.6',
+      ruby_version => '*'
+  }
   # My dotfile repository
   $home = "/Users/${::boxen_user}"
   $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"

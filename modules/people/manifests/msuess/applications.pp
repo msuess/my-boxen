@@ -2,6 +2,7 @@ class people::msuess::applications {
   include caffeine
   include chrome
   include clojure
+  include ctags
   include docker
   include fig
   include firefox
