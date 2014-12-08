@@ -12,20 +12,20 @@ class people::msuess {
 
   android::build_tools { '20': }
 
-  ruby_gem { 'puppet for 2.1.0':
+  ruby_gem { 'puppet for 2.1.2':
       gem => 'puppet',
       version => '~> 3.7.3',
-      ruby_version => '2.1.0'
+      ruby_version => '2.1.2'
   }
-  ruby_gem { 'librarian-puppet for 2.1.0':
+  ruby_gem { 'librarian-puppet for 2.1.2':
       gem => 'librarian-puppet',
       version => '~> 2.0.0',
-      ruby_version => '2.1.0'
+      ruby_version => '2.1.2'
   }
-  ruby_gem { 'nokogiri for 2.1.0':
+  ruby_gem { 'nokogiri for 2.1.2':
       gem => 'nokogiri',
       version => '1.6.5',
-      ruby_version => '2.1.0'
+      ruby_version => '2.1.2'
   }
   # My dotfile repository
   $home = "/Users/${::boxen_user}"
@@ -33,7 +33,7 @@ class people::msuess {
   $ohmyzsh_dir = "${home}/.oh-my-zsh"
 
   ruby::local { $home:
-    version => "2.1.0"
+    version => '2.1.2'
   }
 
   repository { $dotfiles_dir:
