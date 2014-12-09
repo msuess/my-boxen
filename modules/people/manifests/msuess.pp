@@ -32,6 +32,11 @@ class people::msuess {
       version      => '~> 1.0.6',
       ruby_version => '*'
   }
+  ruby_gem { 'scss-lint for all versions':
+      gem          => 'scss-lint',
+      version      => '~> 0.30.0',
+      ruby_version => '*'
+  }
   # My dotfile repository
   $home = "/Users/${::boxen_user}"
   $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
