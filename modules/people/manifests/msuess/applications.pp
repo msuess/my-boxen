@@ -1,4 +1,5 @@
 class people::msuess::applications {
+  include brewcask
   include caffeine
   include chrome
   include clojure
@@ -6,6 +7,7 @@ class people::msuess::applications {
   include docker
   include fig
   include firefox
+  include flux
   include hipchat
   include sequel_pro
   include sourcetree
@@ -43,4 +45,7 @@ class people::msuess::applications {
   package { 'vim':
     ensure => installed
   }
+
+  # casks
+  package { 'beardedspice': provider => 'brewcask' }
 }

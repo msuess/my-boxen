@@ -61,6 +61,7 @@ github "xquartz",     "1.2.1"
 # https://github.com/boxen.
 github "android",       "1.3.0"
 github "atom",          "1.0.0"
+github "brewcask",      "0.0.5"
 github "caffeine",      "1.0.0"
 github "chrome",        "1.2.0"
 github "clojure",       "1.3.0"
