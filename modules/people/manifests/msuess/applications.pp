@@ -17,7 +17,7 @@ class people::msuess::applications {
   include vlc
 
   class { 'vagrant':
-    version => '1.6.5'
+    version => '1.7.2'
   }
 
   vagrant::plugin { 'vagrant-vbguest': }
