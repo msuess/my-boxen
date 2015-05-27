@@ -12,6 +12,9 @@ class people::msuess {
 
   android::build_tools { '20': }
 
+  include go
+  go::version { '1.1.1': }
+
   ruby_gem { 'puppet for 2.1.2':
       gem => 'puppet',
       version => '~> 3.7.3',
