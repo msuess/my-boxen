@@ -11,7 +11,7 @@ Exec {
     "${boxen::config::home}/rbenv/shims",
     "${boxen::config::home}/rbenv/bin",
     "${boxen::config::home}/rbenv/plugins/ruby-build/bin",
-    "${boxen::config::home}/homebrew/bin",
+    "${boxen::config::homebrewdir}/bin",
     '/usr/bin',
     '/bin',
     '/usr/sbin',
@@ -60,21 +60,17 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
-  # default node versions
-  include nodejs::v0_10
-
-  # default npm modules
-  nodejs::module { 'bower':
-    node_version => 'v0.10',
-    ensure => '1.3.8'
-  }
-  nodejs::module { 'grunt-cli':
-    node_version => 'v0.10',
-    ensure => '0.1.13'
-  }
+  # node versions
+  nodejs::version { 'v0.6': }
+  nodejs::version { 'v0.8': }
+  nodejs::version { 'v0.10': }
 
   # default ruby versions
   ruby::version { '1.9.3': }
+  ruby::version { '2.0.0': }
+  ruby::version { '2.1.0': }
+  ruby::version { '2.1.1': }
+  ruby::version { '2.1.2': }
 
   # MySQL
   include mysql
