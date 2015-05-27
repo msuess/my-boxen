@@ -5,7 +5,6 @@ class people::msuess::applications {
   include clojure
   include ctags
   include docker
-  include fig
   include firefox
   include flux
   include hipchat
