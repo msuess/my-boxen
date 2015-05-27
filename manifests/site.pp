@@ -72,12 +72,6 @@ node default {
   ruby::version { '2.1.1': }
   ruby::version { '2.1.2': }
 
-  # MySQL
-  include mysql
-
-  # PostgreSQL
-  include postgresql
-
   # common, useful packages
   package {
     [
