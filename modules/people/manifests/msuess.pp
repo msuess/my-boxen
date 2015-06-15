@@ -35,6 +35,11 @@ class people::msuess {
       version      => '~> 1.0.6',
       ruby_version => '*'
   }
+  ruby_gem { 'gem-browse for all versions':
+      gem          => 'gem-browse',
+      version      => '~> 1.0.0',
+      ruby_version => '*'
+  }
   ruby_gem { 'scss-lint for all versions':
       gem          => 'scss-lint',
       version      => '~> 0.30.0',
@@ -150,7 +155,7 @@ class people::msuess {
     force => true
   }
   exec { "Install ViM Plugins":
-    command => "vim -es +BundleInstall +qall",
+    command => "vim -es +PluginInstall +qall",
     path => "/opt/boxen/homebrew/bin",
     require => Repository[$vundle_dir]
   }
