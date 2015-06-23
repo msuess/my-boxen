@@ -22,6 +22,11 @@ class people::msuess {
   ruby::local { $home:
     version => $ruby_version
   }
+  ruby_gem { "bundler for ${ruby_version}":
+      gem          => 'bundler',
+      version      => '~> 1.9',
+      ruby_version => $ruby_version
+  }
   ruby_gem { "puppet for ${ruby_version}":
       gem          => 'puppet',
       version      => '~> 3.7.3',
