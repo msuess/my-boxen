@@ -15,20 +15,27 @@ class people::msuess {
   include go
   go::version { '1.4.2': }
 
-  ruby_gem { 'puppet for 2.1.2':
-      gem => 'puppet',
-      version => '~> 3.7.3',
-      ruby_version => '2.1.2'
+  $home = "/Users/${::boxen_user}"
+
+  $ruby_version = '2.2.2'
+  ruby::version { $ruby_version: }
+  ruby::local { $home:
+    version => $ruby_version
   }
-  ruby_gem { 'librarian-puppet for 2.1.2':
-      gem => 'librarian-puppet',
-      version => '~> 2.0.0',
-      ruby_version => '2.1.2'
+  ruby_gem { "puppet for ${ruby_version}":
+      gem          => 'puppet',
+      version      => '~> 3.7.3',
+      ruby_version => $ruby_version
   }
-  ruby_gem { 'nokogiri for 2.1.2':
-      gem => 'nokogiri',
-      version => '1.6.5',
-      ruby_version => '2.1.2'
+  ruby_gem { "librarian-puppet for ${ruby_version}":
+      gem          => 'librarian-puppet',
+      version      => '~> 2.0.0',
+      ruby_version => $ruby_version
+  }
+  ruby_gem { "nokogiri for ${ruby_version}":
+      gem          => 'nokogiri',
+      version      => '1.6.5',
+      ruby_version => $ruby_version
   }
   ruby_gem { 'gem-ctags for all versions':
       gem          => 'gem-ctags',
@@ -45,35 +52,31 @@ class people::msuess {
       version      => '~> 0.30.0',
       ruby_version => '*'
   }
+
   # My dotfile repository
-  $home = "/Users/${::boxen_user}"
   $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
   $ohmyzsh_dir = "${home}/.oh-my-zsh"
 
-  ruby::local { $home:
-    version => '2.1.2'
-  }
-
   repository { $dotfiles_dir:
-    source => "msuess/dotfiles",
-    ensure => "master",
-    force => true
+    ensure => 'master',
+    source => 'msuess/dotfiles',
+    force  => true
   }
 
   file { "${home}/.vim":
-    ensure => "directory"
+    ensure => 'directory'
   }
   file { "${home}/.vim/.backup":
-    ensure => "directory"
+    ensure => 'directory'
   }
   file { "${home}/.vim/.tmp":
-    ensure => "directory"
+    ensure => 'directory'
   }
   file { "${home}/.vim/.undo":
-    ensure => "directory"
+    ensure => 'directory'
   }
   file { "${home}/.vim/.yankring":
-    ensure => "directory"
+    ensure => 'directory'
   }
   file { "${home}/.vim/local":
     ensure  => link,
@@ -93,16 +96,16 @@ class people::msuess {
 
 
   repository { $ohmyzsh_dir:
-    source => "robbyrussell/oh-my-zsh",
-    ensure => "master",
-    force => true
+    ensure => 'master',
+    source => 'robbyrussell/oh-my-zsh',
+    force  => true
   }
   file { "${home}/.oh-my-zsh/custom/plugins":
-    ensure => "directory",
+    ensure  => 'directory',
     require => Repository[$ohmyzsh_dir]
   }
   file { "${home}/.oh-my-zsh/custom/themes":
-    ensure => "directory",
+    ensure  => 'directory',
     require => Repository[$ohmyzsh_dir]
   }
   file { "${home}/.oh-my-zsh/custom/plugins/boxen":
@@ -150,13 +153,13 @@ class people::msuess {
 
   $vundle_dir = "${home}/.vim/bundle/vundle"
   repository { $vundle_dir:
-    source => "gmarik/vundle",
-    ensure => "master",
-    force => true
+    ensure => 'master',
+    source => 'gmarik/vundle',
+    force  => true
   }
-  exec { "Install ViM Plugins":
-    command => "vim -es +PluginInstall +qall",
-    path => "/opt/boxen/homebrew/bin",
+  exec { 'Install ViM Plugins':
+    command => 'vim -es +PluginInstall +qall',
+    path    => '/opt/boxen/homebrew/bin',
     require => Repository[$vundle_dir]
   }
 
@@ -164,7 +167,7 @@ class people::msuess {
   exec { 'compile YouCompleteMe':
     command => "${ycm_dir}/install.sh",
     creates => "${ycm_dir}/third_party/ycmd/ycm_core.so",
-    cwd => $ycm_dir,
+    cwd     => $ycm_dir,
     require => Repository[$vundle_dir]
   }
 }
