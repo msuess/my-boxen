@@ -5,9 +5,11 @@ class people::msuess::applications {
   include clojure
   include ctags
   include docker
+  include elasticsearch
   include firefox
   include flux
   include hipchat
+  include mysql
   include sequel_pro
   include sourcetree
   include skype
@@ -16,7 +18,11 @@ class people::msuess::applications {
   include vlc
 
   class { 'vagrant':
-    version => '1.7.2'
+    version => '1.7.4'
+  }
+
+  class { 'lighttable':
+    version => '0.7.2'
   }
 
   vagrant::plugin { 'vagrant-vbguest': }
@@ -42,6 +48,9 @@ class people::msuess::applications {
     ensure => installed
   }
   package { 'vim':
+    ensure => installed
+  }
+  package { 'boot-clj':
     ensure => installed
   }
 

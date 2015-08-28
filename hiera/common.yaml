@@ -22,5 +22,8 @@ ruby::rbenv_plugins:
 # See https://github.com/boxen/puppet-java for docs
 #java::update_version: 51
 
-fig::version: "1.0.1"
 sourcetree::version: "2.0.3"
+
+docker::version: '1.8.1'
+
+elasticsearch::version: "1.4.4"
