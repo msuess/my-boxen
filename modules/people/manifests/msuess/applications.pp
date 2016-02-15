@@ -5,11 +5,9 @@ class people::msuess::applications {
   include clojure
   include ctags
   include docker
-  include elasticsearch
   include firefox
   include flux
   include hipchat
-  include mysql
   include sequel_pro
   include sourcetree
   include skype
