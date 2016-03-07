@@ -3,3 +3,6 @@ docker::compose::version: "1.5.0"
 docker::engine::version: "1.9.0"
 docker::machine::version: "0.5.0"
 docker::swarm::version: "1.0.0"
+
+virtualbox::version: "5.0.16"
+virtualbox::patch_level: "105871"
