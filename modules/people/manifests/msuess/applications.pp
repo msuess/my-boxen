@@ -16,7 +16,7 @@ class people::msuess::applications {
   include vlc
 
   class { 'vagrant':
-    version => '1.7.4'
+    version => '1.8.1'
   }
 
   class { 'lighttable':
